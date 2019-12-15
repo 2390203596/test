@@ -1,0 +1,11 @@
+/* 用于做图片的百分比调整 */
+/* 被替换的内容大小保持其宽高比，该对象将被剪裁以适应 */
+.object-fit-cover{
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+/* 被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比 */
+.object-fit-contain{
+	-o-object-fit: contain;
+	   object-fit: contain;
+}
