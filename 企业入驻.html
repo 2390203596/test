@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/wq.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css"/>
+	</head>
+	<body>
+		<div class="allbox">
+			<div class="title">
+				<div class="center">
+					<span class="head-span">
+						企业入驻
+					</span>
+				</div>
+			</div>
+			<div class="middle">
+				<div class="hfts flex flex-center">
+					<img src="img/laba.png" class="hftsimg object-fit-contain" >
+					<div id="scroll_div" class="hftsnr">
+						<div id="scroll_begin">
+							<span class="hftsspan">请认真核对资料，请认真核对资料，请认真核对资料，请认真核对资料，</span>
+							<span class="hftsspan">感谢您的长期支持，本平台目前提供的通道带积分，支持大部分银行，欢迎您的使用！</span>
+						</div>
+						<div id="scroll_end"></div>
+					</div>
+				</div>
+				<div class="grxx">
+					<div class="grxxbox flex flex-space-between">
+						<span class="grxxspan">企业法人代表</span><input type="text"  placeholder="请输入企业法人代表" class="textlesshide grxxinput" >
+					</div>
+					<div class="grxxbox flex flex-space-between">
+						<span class="grxxspan ">法人代表身份证号码</span><input type="text"  placeholder="请输入法人代表身份证号码" class="textlesshide grxxinput">
+					</div>
+					<div class="grxxbox flex flex-space-between">
+						<span class="grxxspan">法人代表手机号</span><input type="text" placeholder="请输入法人代表手机号" class="textlesshide grxxinput">
+					</div>
+					<div class="grxxbox flex flex-space-between">
+						<span class="grxxspan">企业名称</span><input type="text"  placeholder="请输入企业名称" class="textlesshide grxxinput">
+					</div>
+					<div class="grxxbox flex flex-space-between">
+						<span class="grxxspan">社会统一信用代码</span><input type="text"  placeholder="请输入社会统一信用代码" class="textlesshide grxxinput">
+					</div>
+					<div class="grxxbox flex flex-space-between" style="margin-bottom: 0;">
+						<span class="grxxspan">联系方式</span><input type="text"  placeholder="请输入联系方式" class="textlesshide grxxinput" >
+					</div>
+				</div>
+				<div class="qyxx">
+					<div class="qyxxbox">
+						<span class="qyxxspan">
+							企业法人身份证照
+						</span>
+						<div class="qyxximgbox flex">
+							<div style="width: 46%;height: 100%;padding-right: 10%;" onclick="changeImg1()">
+								<img src="img/sfzzm.png"class="qyxximgleft object-fit-contain"style="width: 100%;" id="facePath1">
+							</div>
+							<input id="img_path1" style="border: 1px solid purple;display: none;" type="file" accept="image/*" />
+							<div style="width: 46%;height: 100%;" onclick="changeImg2()">
+								<img src="img/sfzfm.png"class="qyxximgleft object-fit-contain"style="width: 100%;" id="facePath2">
+							</div>
+							<input id="img_path2" style="border: 1px solid purple;display: none;" type="file" accept="image/*" />
+						</div>
+					</div>
+					<div class="qyxxbox">
+						<span class="qyxxspan">
+							企业证件信息
+						</span>
+						<div class="qyxximgbox">
+							<img src="img/yyzz.png" class="qyxximgright object-fit-contain">
+						</div>
+					</div>
+					<div class="qyxxbox qyxxboxlong" >
+						<span class="qyxxspan">
+							企业简介
+						</span>
+						<textarea class="qyxxtext" placeholder="请填写企业简介，150字以内"></textarea>
+					</div>
+					<div class="qyxxbox">
+						<div class="flex">
+							<span class="qyxxspan">
+								企业荣誉
+							</span>
+							<span class="qyxxspanbz">（上传企业照片，最多10张）</span>
+						</div>
+						<div class="qyxximgbox">
+							<img src="img/yyzz.png" class="qyxximgright object-fit-contain">
+						</div>
+					</div>
+					<div class="qyxxbox">
+						<div class="flex">
+							<span class="qyxxspan">
+								上传产品图片
+							</span>
+							<span class="qyxxspanbz">（上传案例产品）</span>
+						</div>
+						<div class="qyxximgbox">
+							<img src="img/sfzzm.png"class="qyxximgleft object-fit-contain"  >
+							<img src="img/sfzfm.png" class="qyxximgright object-fit-contain ">
+						</div>
+					</div>
+					<div class="qyxxbox qyxxboxlong" >
+						<span class="qyxxspan">
+							企业简介
+						</span>
+						<textarea class="qyxxtext" placeholder="请填写企业简介，150字以内"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="sc">
+				<button type="button" class="scbutton">上 传</button>
+			</div>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper-4.3.3.min.js"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			//文字横向滚动
+			function ScrollImgLeft(){
+				var speed=50;//初始化速度 也就是字体的整体滚动速度
+				var MyMar = null;//初始化一个变量为空 用来存放获取到的文本内容
+				var scroll_begin = document.getElementById("scroll_begin");//获取滚动的开头id
+				var scroll_end = document.getElementById("scroll_end");//获取滚动的结束id
+				var scroll_div = document.getElementById("scroll_div");//获取整体的开头id
+				scroll_end.innerHTML=scroll_begin.innerHTML;//滚动 将end的值放到begin
+				//定义一个方法
+				function Marquee(){
+					if(scroll_end.offsetWidth-scroll_div.scrollLeft<=0)
+						scroll_div.scrollLeft-=scroll_begin.offsetWidth;
+					else
+						scroll_div.scrollLeft++;
+				}
+				MyMar=setInterval(Marquee,speed);//给上面的方法设置时间  setInterval
+				//鼠标点击这条公告栏的时候,清除上面的方法,让公告栏暂停
+				scroll_div.onmouseover = function(){
+					clearInterval(MyMar);
+				}
+				//鼠标点击其他地方的时候,公告栏继续运动
+				scroll_div.onmouseout = function(){
+					MyMar = setInterval(Marquee,speed);
+				}
+			}
+			ScrollImgLeft();
+			function changeImg1() {
+				$("#img_path1").trigger('click');
+			}
+			$("#img_path1").change(function() {
+				
+				var file = this.files[0] ? this.files[0] : null;
+				if (!file) {
+					return false;
+				}
+				var file_reader = new FileReader();
+				file_reader.onload = (function() {
+					var image_url = this.result; // 这是图片的路径
+					$('#facePath1').attr('src', '');
+					$('#facePath1').attr('src', image_url); // 创建图片标签
+				});
+				file_reader.readAsDataURL(file);
+			});
+			function changeImg2() {
+				$("#img_path2").trigger('click');
+			}
+			$("#img_path2").change(function() {
+				
+				var file = this.files[0] ? this.files[0] : null;
+				if (!file) {
+					return false;
+				}
+				var file_reader = new FileReader();
+				file_reader.onload = (function() {
+					var image_url = this.result; // 这是图片的路径
+					$('#facePath2').attr('src', '');
+					$('#facePath2').attr('src', image_url); // 创建图片标签
+				});
+				file_reader.readAsDataURL(file);
+			});
+		</script>
+	</body>
+</html>
